@@ -70,7 +70,7 @@ export default function Downloads() {
               </a>
               
               <a
-                href="https://github.com"
+                href="https://github.com/prajwalnmokashi03/piratelink"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 px-6 rounded-xl hover:bg-white/5 border border-white/5 text-neutral-300 hover:text-white text-xs font-semibold flex items-center justify-center space-x-1.5 transition duration-150 cursor-pointer"

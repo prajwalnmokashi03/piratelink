@@ -1,4 +1,4 @@
-import { Radio, Github, ArrowUpRight, Shield } from "lucide-react";
+import { Github, ArrowUpRight, Shield } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,9 +17,12 @@ export default function Footer() {
           {/* Column 1: App Bio */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center space-x-2.5">
-              <div className="p-2 bg-brand-cyan/10 border border-brand-cyan/25 text-brand-cyan rounded-lg">
-                <Radio className="h-4 w-4 text-brand-cyan animate-pulse" />
-              </div>
+              <img
+                src="/logo.png"
+                alt="Pirate Link Logo"
+                referrerPolicy="no-referrer"
+                className="h-8 w-8 rounded-lg object-contain border border-[#22D3EE]/20 shadow-md shadow-brand-cyan/5"
+              />
               <span className="font-display font-bold text-base text-white tracking-wide">
                 Pirate Link
               </span>
@@ -74,7 +77,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/prajwalnmokashi03/piratelink"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition flex items-center gap-1.5"

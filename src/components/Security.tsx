@@ -6,7 +6,7 @@ export default function Security() {
   const [activeTab, setActiveTab] = useState<"keys" | "relay">("keys");
 
   return (
-    <section id="security" className="py-24 relative overflow-hidden bg-brand-bg">
+    <section id="security" className="py-24 relative overflow-hidden">
       {/* Background Visual Gradient */}
       <div className="absolute top-1/2 left-1/4 w-[450px] h-[450px] bg-brand-blue/5 rounded-full filter blur-[120px] pointer-events-none" />
 
