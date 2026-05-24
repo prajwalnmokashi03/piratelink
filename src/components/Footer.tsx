@@ -1,4 +1,5 @@
 import { Github, ArrowUpRight, Shield } from "lucide-react";
+import logo from "../assets/logo.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,7 +19,7 @@ export default function Footer() {
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center space-x-2.5">
               <img
-                src="/logo.png"
+                src={logo}
                 alt="Pirate Link Logo"
                 referrerPolicy="no-referrer"
                 className="h-8 w-8 rounded-lg object-contain border border-[#22D3EE]/20 shadow-md shadow-brand-cyan/5"

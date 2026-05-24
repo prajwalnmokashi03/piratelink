@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ArrowRight, Github, Cpu, Workflow, Smartphone, Shield, HelpCircle, Download, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import AndroidEmulator from "./AndroidEmulator";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -93,7 +94,7 @@ export default function Navbar() {
               <div className="relative">
                 <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-brand-blue to-brand-cyan opacity-40 blur-sm group-hover:opacity-75 transition duration-200"></div>
                 <img
-                  src="/logo.png"
+                  src={logo}
                   alt="Pirate Link Logo"
                   referrerPolicy="no-referrer"
                   className="relative h-10 w-10 rounded-lg object-contain border border-blue-500/20 shadow-md shadow-brand-blue/10"
@@ -154,7 +155,7 @@ export default function Navbar() {
 
             {/* Brand logo for mobile header */}
             <img
-              src="/logo.png"
+              src={logo}
               alt="Pirate Link Logo"
               referrerPolicy="no-referrer"
               className="md:hidden h-8 w-8 rounded-lg object-contain border border-[#22D3EE]/20 shadow-md shadow-brand-cyan/5"
