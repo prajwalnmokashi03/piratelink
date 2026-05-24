@@ -60,15 +60,14 @@ export default function Downloads() {
 
             {/* Click to trigger direct file simulation */}
             <div className="w-full space-y-3 pt-8 pb-3 relative z-10">
-              <button
-                onClick={() => {
-                  alert("Download simulation triggered! Note: This is an applet landing page demonstration. In production, this would serve the physical .apk asset.");
-                }}
+              <a
+                href="/piratelink.apk"
+                download="piratelink.apk"
                 className="w-full flex items-center justify-center space-x-2.5 bg-gradient-to-r from-brand-blue to-brand-cyan hover:brightness-110 active:scale-95 text-white font-semibold py-4 px-6 rounded-xl transition duration-150 shadow-md shadow-brand-blue/15 cursor-pointer"
               >
                 <Download className="h-5 w-5" />
                 <span>Download standalone APK</span>
-              </button>
+              </a>
               
               <a
                 href="https://github.com"
