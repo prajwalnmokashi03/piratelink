@@ -1,0 +1,6 @@
+{
+  "name": "Pirate Link",
+  "description": "Decentralized offline messaging app that uses Bluetooth mesh networking to relay messages between nearby devices without internet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
