@@ -1,20 +1,49 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# PirateLink Landing Page
 
-# Run and deploy your AI Studio app
+Official landing page for the PirateLink Android application.  
+This website is designed to showcase the project, explain its core features, and provide APK downloads for users.
 
-This contains everything you need to run your app locally.
+## Overview
 
-View your app in AI Studio: https://ai.studio/apps/458521ee-336b-46a6-80fa-878b79ade966
+PirateLink is an offline-first peer-to-peer communication platform focused on decentralized connectivity. The landing page acts as the public-facing website for the project and is optimized for deployment on Vercel.
 
-## Run Locally
+The website includes:
 
-**Prerequisites:**  Node.js
+- Project introduction
+- Feature highlights
+- APK download section
+- Responsive UI
+- Modern landing page design
+- Fast deployment workflow
 
+## Tech Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Next.js
+- React
+- Tailwind CSS
+- Vercel
+
+## Features
+
+- Responsive design for desktop and mobile
+- Modern UI/UX
+- APK download integration
+- Fast page loads
+- SEO-friendly structure
+- Clean component-based architecture
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have installed:
+
+- Node.js
+- npm or pnpm
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/prajwalnmokashi03/piratelink-landing-page.git
