@@ -20,14 +20,14 @@ export default function Downloads() {
   ];
 
   return (
-    <section id="download" className="py-24 relative overflow-hidden">
+    <section id="download" className="py-12 md:py-20 relative overflow-hidden">
       {/* Background soft glowing orb */}
       <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full filter blur-[120px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
-        <div className="text-center mb-16 space-y-4">
+        <div className="text-center mb-8 md:mb-12 space-y-3">
           <p className="text-xs font-semibold text-brand-cyan tracking-widest uppercase font-mono">
             Get the Application
           </p>
@@ -43,7 +43,7 @@ export default function Downloads() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch pt-2">
           
           {/* Download APK Box */}
-          <div className="md:col-span-6 bg-brand-card/30 border border-brand-card-border p-8 rounded-2xl flex flex-col justify-between items-center text-center relative overflow-hidden shadow-xl hover:border-brand-blue/20 transition duration-300">
+          <div className="md:col-span-6 bg-brand-card/30 border border-brand-card-border p-6 md:p-8 rounded-2xl flex flex-col justify-between items-center text-center relative overflow-hidden shadow-xl hover:border-brand-blue/20 transition duration-300">
             
             {/* Ambient visual overlay decoration */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-blue/5 rounded-bl-full pointer-events-none" />
@@ -83,7 +83,7 @@ export default function Downloads() {
           </div>
 
           {/* Technical release stats table columns */}
-          <div className="md:col-span-6 bg-[#090D1A]/95 p-8 rounded-2xl border border-brand-card-border flex flex-col justify-between shadow-xl">
+          <div className="md:col-span-6 bg-[#090D1A]/95 p-6 md:p-8 rounded-2xl border border-brand-card-border flex flex-col justify-between shadow-xl">
             <div className="space-y-5">
               <h3 className="text-xs font-mono font-bold uppercase text-brand-cyan tracking-wider pb-3 border-b border-white/5">
                 Technical Specifications
