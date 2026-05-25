@@ -38,16 +38,15 @@ export default function HowItWorks() {
     {
       id: 3,
       title: "Deliver Messages Without Internet",
-      subtitle: "E2E Decryption & Immediate Handshake",
+      subtitle: "Symmetric Decryption & ACK Delivery",
       description:
-        "Once the encrypted message package reaches the recipient's phone, their unique secure key decrypts it instantly. The sender automatically receives a local receipt code when the path loops back.",
+        "Once the encrypted message package reaches the recipient's phone, the shared AES-GCM key decrypts it instantly. The sender automatically receives a local receipt code when the path loops back.",
       icon: CheckCircle,
       terminalLines: [
         "Target device reached: 'elish'",
-        "Attempting key-exchange verification...",
-        "Authentication status: [SUCCESS]",
+        "Attempting AES-GCM decryption...",
         "Payload decrypted locally by recipient client.",
-        "Local transmission code signature sent back. [DELIVERED]",
+        "Local ACK delivery receipt sent back. [DELIVERED]",
       ],
     },
   ];

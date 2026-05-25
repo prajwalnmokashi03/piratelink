@@ -21,7 +21,7 @@ export default function Faq() {
     },
     {
       question: "Can someone relaying my message intercept or read the conversation?",
-      answer: "No. Every communication packet is fully encrypted at the source using highly robust AES-256-GCM symmetric block ciphers. The keys are negotiated directly between you and the recipient through a secure Curve-25519 Elliptic Curve Diffie-Hellman handshake. Intermediate relays only parse routing metadata envelopes; they have zero visibility into content payloads.",
+      answer: "No. Every communication packet is fully encrypted at the source using highly robust AES-GCM symmetric block ciphers. Intermediate relays only parse routing metadata envelopes; they have zero visibility into content payloads.",
     },
     {
       question: "What is the physical range between individual peer devices?",

@@ -153,7 +153,7 @@ export default function Footer() {
           <div className="flex items-center space-x-4">
             <span>Serverless Architecture</span>
             <span>•</span>
-            <span className="text-brand-cyan">AES-256 Protocol Verified</span>
+            <span className="text-brand-cyan">AES-GCM Encryption</span>
           </div>
         </div>
 

@@ -48,9 +48,9 @@ export default function Security() {
               <div className="p-3 bg-brand-blue/10 border border-brand-blue/20 rounded-xl inline-block text-brand-cyan">
                 <Lock className="h-5 w-5" />
               </div>
-              <h3 className="font-display text-lg font-bold text-white font-semibold">Strict E2E Crypto</h3>
+              <h3 className="font-display text-lg font-bold text-white font-semibold">AES-GCM Encryption</h3>
               <p className="font-sans text-xs text-neutral-400 leading-relaxed font-light">
-                Messages are locked securely on your device, and only readable by the designated client ID.
+                Messages are encrypted using AES-GCM symmetric block ciphers before transmission over the mesh.
               </p>
             </div>
           </div>
@@ -72,9 +72,9 @@ export default function Security() {
               <div className="p-3 bg-brand-blue/10 border border-brand-blue/20 rounded-xl inline-block text-brand-cyan">
                 <KeyRound className="h-5 w-5" />
               </div>
-              <h3 className="font-display text-lg font-bold text-white">No Identity Escrow</h3>
+              <h3 className="font-display text-lg font-bold text-white">Symmetric Shared Key</h3>
               <p className="font-sans text-xs text-neutral-400 leading-relaxed font-light">
-                Public and private key pairs are assembled locally using Curve-25519, verified over proximity handshakes.
+                All participating devices share a predefined symmetric AES-GCM key to participate in the secure mesh.
               </p>
             </div>
           </div>
@@ -87,27 +87,27 @@ export default function Security() {
             {/* Simulation text explain */}
             <div className="lg:col-span-5 space-y-6">
               <span className="text-[10px] font-mono uppercase tracking-widest text-brand-cyan bg-[#06B6D4]/10 border border-[#06B6D4]/20 px-3 py-1 rounded-full font-bold">
-                Local Key Exchange Method
+                Symmetric Key Architecture
               </span>
               <h3 className="font-display text-2xl font-bold text-white tracking-tight">
-                Self-Sovereign Identity Protection
+                Mesh Payload Encryption
               </h3>
               <p className="font-sans text-neutral-400 text-sm leading-relaxed font-light">
-                Pirate Link utilizes modern cryptographic primitives. It generates localized peer fingerprints when you scan physically. No global registrar holds the list of who is talking to whom, keeping communications decentralized at every tier.
+                Pirate Link utilizes modern cryptographic primitives. It encrypts all payloads before transmission using AES-GCM. No global registrar holds the list of who is talking to whom, keeping communications decentralized.
               </p>
               
               <div className="space-y-2">
                 <p className="flex items-center text-xs text-neutral-300 font-sans">
                   <span className="h-5 w-5 bg-brand-cyan/10 border border-brand-cyan/25 flex items-center justify-center rounded-md mr-2 text-brand-cyan text-[10px] font-semibold">1</span>
-                  Zero-Knowledge Proof dynamic handshakes
+                  AES-GCM Symmetric Encryption
                 </p>
                 <p className="flex items-center text-xs text-neutral-300 font-sans">
                   <span className="h-5 w-5 bg-brand-cyan/10 border border-brand-cyan/25 flex items-center justify-center rounded-md mr-2 text-brand-cyan text-[10px] font-semibold">2</span>
-                  Curve25519 & AES-256 cipher blocks
+                  Shared key required for mesh participation
                 </p>
                 <p className="flex items-center text-xs text-neutral-300 font-sans">
                   <span className="h-5 w-5 bg-brand-cyan/10 border border-brand-cyan/25 flex items-center justify-center rounded-md mr-2 text-brand-cyan text-[10px] font-semibold">3</span>
-                  Episodic session keys recycled regularly
+                  Payloads are secured locally before dispatch
                 </p>
               </div>
             </div>
@@ -120,22 +120,22 @@ export default function Security() {
 
               <div className="border-b border-white/5 pb-3 flex items-center space-x-2">
                 <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-[10px] text-neutral-400">Curve-25519 Key Exchange Visualizer</span>
+                <span className="text-[10px] text-neutral-400">AES-GCM Payload Encryption Visualizer</span>
               </div>
 
-              {/* Secure Handshake Simulation Visual Block */}
+              {/* Secure Encryption Simulation Visual Block */}
               <div className="grid grid-cols-2 gap-4 my-2 text-center text-[10px]">
                 <div className="bg-[#0e142e]/80 border border-white/5 p-4 rounded-lg relative">
                   <span className="absolute top-1.5 left-2 text-[8px] tracking-wide text-neutral-500 uppercase">My Device</span>
-                  <div className="text-white font-bold my-1">PUBLIC KEY (dh_pubA)</div>
+                  <div className="text-white font-bold my-1">PLAIN TEXT (Payload)</div>
                   <div className="text-[9px] text-neutral-500 overflow-hidden line-clamp-1 bg-black/40 py-1 px-1.5 rounded font-mono select-all">
-                    0x8e82bd017caefc26de490a...
+                    "Meeting at coordinates..."
                   </div>
                 </div>
 
                 <div className="bg-[#0e142e]/80 border border-white/5 p-4 rounded-lg relative">
-                  <span className="absolute top-1.5 left-2 text-[8px] tracking-wide text-neutral-500 uppercase">Alice's Device</span>
-                  <div className="text-white font-bold my-1">PUBLIC KEY (dh_pubB)</div>
+                  <span className="absolute top-1.5 left-2 text-[8px] tracking-wide text-neutral-500 uppercase">Mesh Transmission</span>
+                  <div className="text-white font-bold my-1">AES-GCM CIPHERTEXT</div>
                   <div className="text-[9px] text-neutral-500 overflow-hidden line-clamp-1 bg-black/40 py-1 px-1.5 rounded font-mono select-all">
                     0x42fbcceeaa19bcdead6182...
                   </div>
@@ -145,10 +145,10 @@ export default function Security() {
               <div className="bg-[#0e142e]/40 p-4 rounded-lg border border-[#06B6D4]/10 space-y-1.5">
                 <div className="flex items-center space-x-2 text-brand-cyan font-semibold text-[10px]">
                   <Check className="h-3 w-3" />
-                  <span>SHARED SECRET GENERATED SUCCESSFULLY</span>
+                  <span>PAYLOAD ENCRYPTED SUCCESSFULLY</span>
                 </div>
                 <p className="text-[10px] text-neutral-400 leading-relaxed">
-                  Both devices combine the parameters to calculate the local symmetric session key <code className="text-white">K_sym</code>. Intermediary nodes relaying the packet cannot derive this key.
+                  Both devices use the same symmetric key <code className="text-white">K_sym</code>. The packet is secured during transit across the local area mesh network.
                 </p>
               </div>
 

@@ -26,9 +26,9 @@ export default function Features() {
     },
     {
       id: "encryption",
-      title: "End-to-End Encryption",
+      title: "Symmetric Encryption",
       description:
-        "Protected by industry-trusted AES-256-GCM. Messages remain fully unreadable to any intermediaries relaying them.",
+        "Messages are encrypted using AES-GCM symmetric encryption before transmission.",
       icon: ShieldCheck,
       color: "from-emerald-500/20 to-teal-500/5",
       iconColor: "text-emerald-400",

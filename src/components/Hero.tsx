@@ -92,8 +92,8 @@ export default function Hero() {
                 <p className="text-xs text-neutral-400 font-sans tracking-wide">Data Charges</p>
               </div>
               <div>
-                <p className="font-display text-2xl font-bold text-brand-cyan">AES-256</p>
-                <p className="text-xs text-neutral-400 font-sans tracking-wide font-light">E2E Encrypted</p>
+                <p className="font-display text-2xl font-bold text-brand-cyan">AES-GCM</p>
+                <p className="text-xs text-neutral-400 font-sans tracking-wide font-light">Symmetric Encrypted</p>
               </div>
               <div>
                 <p className="font-display text-2xl font-bold text-brand-blue">Open</p>
