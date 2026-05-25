@@ -63,8 +63,9 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4"
             >
               <a
-                href="#download"
-                className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-gradient-to-r from-brand-blue to-brand-cyan hover:brightness-110 active:scale-95 text-white font-medium px-8 py-4 rounded-xl transition duration-200 shadow-lg shadow-brand-blue/20 cursor-pointer"
+                href="https://github.com/prajwalnmokashi03/piratelink/raw/main/public/piratelink.apk"
+                download="piratelink.apk"
+                className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-gradient-to-r from-brand-blue to-brand-cyan hover:brightness-110 active:scale-95 text-white font-semibold py-4 px-8 rounded-xl transition duration-150 shadow-lg shadow-brand-blue/20"
               >
                 <Download className="h-5 w-5" />
                 <span>Download APK For Android</span>

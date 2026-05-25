@@ -145,11 +145,8 @@ export default function Navbar() {
                 <span>GitHub</span>
               </a>
               <a
-                href="#download"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleLinkClick("#download");
-                }}
+                href="https://github.com/prajwalnmokashi03/piratelink/raw/main/public/piratelink.apk"
+                download="piratelink.apk"
                 className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-lg group bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] hover:text-white focus:outline-none focus:ring-1 focus:ring-blue-500/20"
               >
                 <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-[#0B1020] rounded-md group-hover:bg-opacity-0 flex items-center space-x-1.5">
@@ -206,20 +203,17 @@ export default function Navbar() {
             })}
 
             {/* Premium accentuated Download tab button positioned in the center */}
-            <button
-              onClick={() => handleLinkClick("#download")}
-              className={`relative flex items-center justify-center flex-col py-1 px-2.5 rounded-xl transition-all duration-300 cursor-pointer ${
-                activeTab === "#download"
-                  ? "bg-gradient-to-r from-brand-blue to-brand-cyan shadow-md shadow-brand-blue/20 text-white"
-                  : "bg-brand-blue/15 border border-brand-blue/20 hover:bg-brand-blue/30 text-brand-cyan"
-              }`}
+            <a
+              href="https://github.com/prajwalnmokashi03/piratelink/raw/main/public/piratelink.apk"
+              download="piratelink.apk"
+              className="relative flex items-center justify-center flex-col py-1 px-2.5 rounded-xl transition-all duration-300 cursor-pointer bg-gradient-to-r from-brand-blue to-brand-cyan shadow-md shadow-brand-blue/20 text-white"
               style={{ minWidth: "54px", minHeight: "48px" }}
             >
-              <Download className={`h-[18px] w-[18px] ${activeTab === "#download" ? "text-white" : "text-brand-cyan animate-bounce"}`} />
-              <span className={`text-[8px] font-mono tracking-wider font-semibold uppercase mt-1 ${activeTab === "#download" ? "text-white" : "text-brand-cyan"}`}>
+              <Download className="h-[18px] w-[18px] text-white" />
+              <span className="text-[8px] font-mono tracking-wider font-semibold uppercase mt-1 text-white">
                 Download
               </span>
-            </button>
+            </a>
 
             {mobileNavLinksRight.map((link) => {
               const Icon = link.icon;
