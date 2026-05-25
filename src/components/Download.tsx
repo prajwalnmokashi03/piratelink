@@ -61,7 +61,7 @@ export default function Downloads() {
             {/* Click to trigger direct file simulation */}
             <div className="w-full space-y-3 pt-8 pb-3 relative z-10">
               <a
-                href="https://github.com/prajwalnmokashi03/piratelink/releases/latest/download/piratelink.apk"
+                href="https://github.com/prajwalnmokashi03/piratelink/raw/main/piratelink.apk"
                 download="piratelink.apk"
                 className="w-full flex items-center justify-center space-x-2.5 bg-gradient-to-r from-brand-blue to-brand-cyan hover:brightness-110 active:scale-95 text-white font-semibold py-4 px-6 rounded-xl transition duration-150 shadow-md shadow-brand-blue/15 cursor-pointer"
               >
