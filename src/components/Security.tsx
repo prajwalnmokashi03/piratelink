@@ -6,14 +6,14 @@ export default function Security() {
   const [activeTab, setActiveTab] = useState<"keys" | "relay">("keys");
 
   return (
-    <section id="security" className="py-24 relative overflow-hidden">
+    <section id="security" className="py-16 md:py-24 scroll-mt-20 relative overflow-hidden">
       {/* Background Visual Gradient */}
       <div className="absolute top-1/2 left-1/4 w-[450px] h-[450px] bg-brand-blue/5 rounded-full filter blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Row 1: Section Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-10 md:mb-16 items-center">
           <div className="lg:col-span-6 space-y-4">
             <p className="text-xs font-semibold text-brand-cyan tracking-widest uppercase font-mono">
               Military-Grade Cryptology
@@ -30,7 +30,7 @@ export default function Security() {
         </div>
 
         {/* Row 2: 4 Key Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 md:mb-16">
           <div className="bg-[#131B35]/20 border border-white/5 rounded-2xl p-6 space-y-4 flex flex-col justify-between hover:border-brand-blue/30 transition-all duration-300">
             <div className="space-y-3">
               <div className="p-3 bg-brand-blue/10 border border-brand-blue/20 rounded-xl inline-block text-brand-cyan">

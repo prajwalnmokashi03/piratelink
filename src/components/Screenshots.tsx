@@ -63,13 +63,13 @@ export default function Screenshots() {
   };
 
   return (
-    <section id="screenshots" className="py-24 relative overflow-hidden border-t border-brand-card-border/20">
+    <section id="screenshots" className="py-16 md:py-24 scroll-mt-20 relative overflow-hidden border-t border-brand-card-border/20">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-cyan/5 rounded-full filter blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Headings */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 space-y-4">
           <p className="text-xs font-semibold text-brand-cyan tracking-widest uppercase font-mono bg-brand-cyan/10 border border-brand-cyan/20 px-3 py-1 rounded-full inline-block">
             Decentralized Application Simulation
           </p>
@@ -82,7 +82,7 @@ export default function Screenshots() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-12 md:mb-24">
           
           {/* Left Feature column: Deep linking specifications from the screenshots */}
           <div className="lg:col-span-5 space-y-8 flex flex-col justify-center">

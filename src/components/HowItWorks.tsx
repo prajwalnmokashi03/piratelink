@@ -52,11 +52,11 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 relative bg-[#0e142e]/30 border-t border-b border-brand-card-border/50">
+    <section id="how-it-works" className="py-16 md:py-24 scroll-mt-20 relative bg-[#0e142e]/30 border-t border-b border-brand-card-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 space-y-4">
           <p className="text-xs font-semibold text-brand-cyan tracking-widest uppercase font-mono">
             How It Works
           </p>

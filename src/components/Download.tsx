@@ -20,7 +20,7 @@ export default function Downloads() {
   ];
 
   return (
-    <section id="download" className="py-12 md:py-20 relative overflow-hidden">
+    <section id="download" className="py-16 md:py-24 scroll-mt-20 relative overflow-hidden">
       {/* Background soft glowing orb */}
       <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full filter blur-[120px] pointer-events-none" />
 

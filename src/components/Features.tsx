@@ -63,7 +63,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-24 relative overflow-hidden">
+    <section id="features" className="py-16 md:py-24 scroll-mt-20 relative overflow-hidden">
       {/* Background visual accents */}
       <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-brand-blue/10 rounded-full filter blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-brand-cyan/5 rounded-full filter blur-[100px] pointer-events-none" />
@@ -71,7 +71,7 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 space-y-4">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
