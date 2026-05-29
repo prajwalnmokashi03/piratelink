@@ -12,7 +12,7 @@ export default function Downloads() {
   };
 
   const specs = [
-    { name: "Current Version", value: "v1.4.2 (Production Build)" },
+    { name: "Current Android Build", value: "v1.4.2" },
     { name: "File Size", value: "12.8 MB (Lightweight APK)" },
     { name: "Compatibility", value: "Android 8.0 (Oreo) and above" },
     { name: "Architectures", value: "arm64-v8a, armeabi-v7a, x86_64" },
@@ -20,7 +20,7 @@ export default function Downloads() {
   ];
 
   return (
-    <section id="download" className="py-16 md:py-24 scroll-mt-20 relative overflow-hidden">
+    <section id="download" className="py-14 md:py-20 scroll-mt-20 relative overflow-hidden">
       {/* Background soft glowing orb */}
       <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full filter blur-[120px] pointer-events-none" />
 
@@ -35,7 +35,7 @@ export default function Downloads() {
             Deploy Pirate Link on your device.
           </h2>
           <p className="font-sans text-neutral-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Download the secure standalone APK directly. Follow local sideload installation guidelines to activate decentralized mesh messaging in minutes.
+            Download the standalone Android APK directly. Follow local sideload installation guidelines to start nearby mesh messaging.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export default function Downloads() {
               </div>
               <div>
                 <h3 className="font-display text-xl font-bold text-white">Direct Android Installation</h3>
-                <p className="text-xs text-neutral-400 mt-1">Sideload compatible with standard Android OS distributions.</p>
+                <p className="text-xs text-neutral-400 mt-1">For Android devices with compatible Bluetooth LE hardware.</p>
               </div>
             </div>
 
@@ -75,7 +75,7 @@ export default function Downloads() {
                 rel="noopener noreferrer"
                 className="w-full py-3 px-6 rounded-xl hover:bg-white/5 border border-white/5 text-neutral-300 hover:text-white text-xs font-semibold flex items-center justify-center space-x-1.5 transition duration-150 cursor-pointer"
               >
-                <span>Compile from Source on GitHub</span>
+                <span>Review source on GitHub</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
             </div>
@@ -86,7 +86,7 @@ export default function Downloads() {
           <div className="md:col-span-6 bg-[#090D1A]/95 p-6 md:p-8 rounded-2xl border border-brand-card-border flex flex-col justify-between shadow-xl">
             <div className="space-y-5">
               <h3 className="text-xs font-mono font-bold uppercase text-brand-cyan tracking-wider pb-3 border-b border-white/5">
-                Technical Specifications
+                Android Build Details
               </h3>
               
               <div className="space-y-4 font-sans text-xs">

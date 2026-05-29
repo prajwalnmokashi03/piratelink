@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] md:min-h-screen pt-32 pb-16 md:pt-40 md:pb-24 flex flex-col justify-center overflow-hidden"
+      className="relative min-h-[88svh] md:min-h-screen pt-28 pb-12 md:pt-40 md:pb-20 flex flex-col justify-center overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -26,7 +26,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-cyan"></span>
               </span>
               <span className="text-xs font-semibold text-neutral-300 tracking-wide font-mono uppercase">
-                Offline P2P Mesh v1.4 Available
+                Android Local Mesh Available
               </span>
             </motion.div>
 
@@ -37,9 +37,9 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1]"
             >
-              Offline Communication.
+              Local-first mesh messaging.
               <span className="block mt-2 bg-gradient-to-r from-brand-blue via-brand-cyan to-brand-cyan bg-clip-text text-transparent animate-glow">
-                Reimagined.
+                Built for nearby peers.
               </span>
             </motion.h1>
 
@@ -50,9 +50,9 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="font-sans text-neutral-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light"
             >
-              Pirate Link connects you without cell reception, internet Access, or account logins. 
-              By linking nearby devices via secure, low-energy Bluetooth mesh grids, every 
-              phone becomes an autonomous transmitter and message relay.
+              Pirate Link is an open-source decentralized communication app for nearby Android devices.
+              Send encrypted DMs through local peers so groups can stay connected without relying on
+              internet infrastructure.
             </motion.p>
 
             {/* CTA Group */}
@@ -89,16 +89,16 @@ export default function Hero() {
               className="grid grid-cols-3 gap-4 pt-6 max-w-lg mx-auto lg:mx-0 text-left border-t border-white/5"
             >
               <div>
-                <p className="font-display text-2xl font-bold text-white">0kb</p>
-                <p className="text-xs text-neutral-400 font-sans tracking-wide">Data Charges</p>
+                <p className="font-display text-2xl font-bold text-white">Local</p>
+                <p className="text-xs text-neutral-400 font-sans tracking-wide">Nearby Mesh</p>
               </div>
               <div>
-                <p className="font-display text-2xl font-bold text-brand-cyan">AES-GCM</p>
-                <p className="text-xs text-neutral-400 font-sans tracking-wide font-light">Symmetric Encrypted</p>
+                <p className="font-display text-2xl font-bold text-brand-cyan">E2E</p>
+                <p className="text-xs text-neutral-400 font-sans tracking-wide font-light">Encrypted DMs</p>
               </div>
               <div>
                 <p className="font-display text-2xl font-bold text-brand-blue">Open</p>
-                <p className="text-xs text-neutral-400 font-sans tracking-wide">Source P2P</p>
+                <p className="text-xs text-neutral-400 font-sans tracking-wide">Source Code</p>
               </div>
             </motion.div>
           </div>

@@ -18,7 +18,7 @@ export default function Navbar() {
       }
 
       // Automatically trace which section is in view
-      const sections = ["features", "how-it-works", "hero", "security", "faq", "download"];
+      const sections = ["features", "how-it-works", "platform-status", "hero", "security", "faq", "download"];
       let currentSection = "";
       for (const section of sections) {
         const el = document.getElementById(section);
@@ -41,14 +41,14 @@ export default function Navbar() {
   const navLinks = [
     { name: "Features", href: "#features", icon: Cpu },
     { name: "How It Works", href: "#how-it-works", icon: Workflow },
-    { name: "Emulator", href: "#hero", icon: Smartphone },
+    { name: "Status", href: "#platform-status", icon: Smartphone },
     { name: "Security", href: "#security", icon: Shield },
     { name: "FAQs", href: "#faq", icon: HelpCircle },
   ];
 
   const mobileNavLinksLeft = [
     { name: "Features", href: "#features", icon: Cpu },
-    { name: "Emulator", href: "#hero", icon: Smartphone },
+    { name: "Status", href: "#platform-status", icon: Smartphone },
   ];
 
   const mobileNavLinksRight = [
@@ -289,7 +289,7 @@ export default function Navbar() {
 
               {/* Small helper info footer */}
               <p className="text-[9px] font-mono text-neutral-500 mt-2 text-center select-none">
-                Tap anywhere on the simulated device to test handshakes.
+                Tap the simulated device to explore nearby messaging.
               </p>
             </motion.div>
           </div>

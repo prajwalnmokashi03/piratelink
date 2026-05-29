@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Smartphone, Shield, Globe, MessageSquare } from "lucide-react";
+import { Smartphone, Shield, Route, MessageSquare } from "lucide-react";
 import { HeadphoneSnail, PrajwalSnail, ElishSnail } from "./SnailAvatars";
 
 export default function Screenshots() {
@@ -63,7 +63,7 @@ export default function Screenshots() {
   };
 
   return (
-    <section id="screenshots" className="py-16 md:py-24 scroll-mt-20 relative overflow-hidden border-t border-brand-card-border/20">
+    <section id="screenshots" className="py-14 md:py-20 scroll-mt-20 relative overflow-hidden border-t border-brand-card-border/20">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-cyan/5 rounded-full filter blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -71,31 +71,31 @@ export default function Screenshots() {
         {/* Section Headings */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16 space-y-4">
           <p className="text-xs font-semibold text-brand-cyan tracking-widest uppercase font-mono bg-brand-cyan/10 border border-brand-cyan/20 px-3 py-1 rounded-full inline-block">
-            Decentralized Application Simulation
+            Local Mesh Preview
           </p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Cooperative Mesh Simulator
+            See local relay in motion.
           </h2>
           <p className="font-sans text-neutral-400 text-sm sm:text-base leading-relaxed">
-            Test custom signal ranges, active device handshakes, setting configurations, and multi-hop route propagation parameters live in real-time.
+            Explore how direct and multi-hop nearby messaging feels without implying internet gateways or cross-network routing.
           </p>
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-12 md:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-10 md:mb-16">
           
           {/* Left Feature column: Deep linking specifications from the screenshots */}
-          <div className="lg:col-span-5 space-y-8 flex flex-col justify-center">
+          <div className="lg:col-span-5 space-y-6 md:space-y-8 flex flex-col justify-center">
             
             <div className="space-y-4 text-center lg:text-left">
               <span className="p-3 bg-brand-cyan/10 border border-brand-cyan/25 text-white rounded-xl inline-block shadow">
                 <Smartphone className="h-6 w-6 text-brand-cyan" />
               </span>
               <h3 className="font-display text-2xl font-bold text-white tracking-tight">
-                Physical Packet Simulation
+                Nearby Mesh Simulation
               </h3>
               <p className="font-sans text-neutral-400 text-sm leading-relaxed">
-                Watch physical cryptographic frames travel through intermediate mesh nodes. Toggle direct pathways or cascade across three separate network hops seamlessly.
+                Watch an encrypted local message move directly or through one nearby relay when the recipient is outside direct range.
               </p>
             </div>
 
@@ -104,11 +104,11 @@ export default function Screenshots() {
               
               <div className="flex items-start space-x-3 text-left bg-white/5 p-3.5 rounded-xl border border-white/5">
                 <div className="mt-0.5 flex items-center justify-center p-2 bg-brand-blue/10 border border-brand-blue/20 rounded-lg text-brand-cyan font-mono text-xs">
-                  TTL
+                  Hop
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">Default TTL Control</h4>
-                  <p className="text-xs text-neutral-400 mt-0.5">Define your signal bounds. Packets will forward up to 3 hops before expiration to conserve node battery grids.</p>
+                  <h4 className="text-sm font-semibold text-white">Local Relay Limit</h4>
+                  <p className="text-xs text-neutral-400 mt-0.5">Messages can be carried through nearby peers within the local mesh instead of traveling through the internet.</p>
                 </div>
               </div>
 
@@ -117,18 +117,18 @@ export default function Screenshots() {
                   <Shield className="h-4 w-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">Secure E2E Lock</h4>
-                  <p className="text-xs text-neutral-400 mt-0.5">Individual conversation streams showcase a cyan secure pad-lock signifying real static ECDH/AES keys are working.</p>
+                  <h4 className="text-sm font-semibold text-white">Private Conversations</h4>
+                  <p className="text-xs text-neutral-400 mt-0.5">Direct messages are encrypted before relay peers help move them across the local network.</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3 text-left bg-white/5 p-3.5 rounded-xl border border-white/5">
                 <div className="mt-0.5 flex items-center justify-center p-2 bg-brand-blue/10 border border-brand-blue/20 rounded-lg text-brand-cyan">
-                  <Globe className="h-4 w-4" />
+                  <Route className="h-4 w-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">Gateway Sync System</h4>
-                  <p className="text-xs text-neutral-400 mt-0.5">Enables mesh nodes to relay data back to downstream networks when they hit an internet-connected peer.</p>
+                  <h4 className="text-sm font-semibold text-white">Android Mesh Today</h4>
+                  <p className="text-xs text-neutral-400 mt-0.5">The current mesh experience is Android-first and nearby. Desktop LAN networking is tracked separately in platform status.</p>
                 </div>
               </div>
 
@@ -307,7 +307,7 @@ export default function Screenshots() {
                         className="absolute bg-gradient-to-r from-brand-blue to-brand-cyan text-white text-[9px] font-semibold px-2.5 py-1 rounded-full shadow-lg shadow-brand-blue/30 transition-all duration-700 -translate-x-1/2 -translate-y-1/2 z-20 border border-white/10 flex items-center gap-1.5"
                       >
                         <MessageSquare className="h-2.5 w-2.5 animate-pulse" />
-                        <span>{activeTab === "direct" ? "🔑 helo" : "🔒 AES payload"} ({relayStep} hop)</span>
+                        <span>{activeTab === "direct" ? "helo" : "encrypted payload"} ({relayStep} hop)</span>
                       </div>
                     )}
                   </div>
@@ -316,7 +316,7 @@ export default function Screenshots() {
                   <div className="min-h-[50px] bg-black/40 border-t border-white/5 rounded-lg p-2 flex flex-col justify-end space-y-1 relative z-20">
                     {simulatedChat.length === 0 ? (
                       <div className="text-center text-[9px] font-sans text-neutral-500 py-1">
-                        💡 Click &apos;Trigger Message Relay&apos; below to send packet handshakes
+                        Click &apos;Trigger Message Relay&apos; below to test local delivery
                       </div>
                     ) : (
                       simulatedChat.map((chat, i) => {
@@ -346,8 +346,8 @@ export default function Screenshots() {
                     <div className={`h-2.5 w-2.5 rounded-full ${isRelaying ? "bg-green-500 animate-pulse" : "bg-neutral-600"}`}></div>
                     <span className="font-mono text-[10px] font-light">
                       {isRelaying
-                        ? `Transmitting BLE packets...`
-                        : `Inactive | Ready to sync`}
+                        ? `Sending local message...`
+                        : `Inactive | Ready for local relay`}
                     </span>
                   </div>
                   <button
@@ -355,7 +355,7 @@ export default function Screenshots() {
                     disabled={isRelaying}
                     className="bg-brand-blue/10 hover:bg-brand-blue text-brand-blue hover:text-white px-3.5 py-1.5 rounded-lg border border-brand-blue/30 hover:border-brand-blue font-medium transition duration-200 cursor-pointer disabled:opacity-50 animate-pulse"
                   >
-                    {isRelaying ? "Transmitting..." : "Trigger Message Relay"}
+                    {isRelaying ? "Sending..." : "Trigger Message Relay"}
                   </button>
                 </div>
 

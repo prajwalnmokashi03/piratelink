@@ -8,6 +8,7 @@ import InteractiveMeshBackground from "./components/InteractiveMeshBackground";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
+import PlatformStatus from "./components/PlatformStatus";
 import Screenshots from "./components/Screenshots";
 import Security from "./components/Security";
 import Downloads from "./components/Download";
@@ -35,6 +36,9 @@ export default function App() {
 
         {/* Action How It Works */}
         <HowItWorks />
+
+        {/* Current platform availability */}
+        <PlatformStatus />
 
         {/* Interactive App Mockup Simulation */}
         <Screenshots />

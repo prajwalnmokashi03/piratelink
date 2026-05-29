@@ -30,10 +30,9 @@ export default function AndroidEmulator() {
   const [activeTab, setActiveTab] = useState<"dm" | "local" | "map" | "settings" | "debug">("local");
   
   // Settings Screen toggles
-  const [gatewaySync, setGatewaySync] = useState(true);
   const [showNodeId, setShowNodeId] = useState(false);
   const [messageSize, setMessageSize] = useState(14);
-  const [currentTTL, setCurrentTTL] = useState(3);
+  const [relayLimit, setRelayLimit] = useState(3);
 
   // Chat memory
   const [localMessages, setLocalMessages] = useState<Message[]>([
@@ -116,7 +115,7 @@ export default function AndroidEmulator() {
 
       setTimeout(() => {
         setLocalMessages((prev) =>
-          prev.map((m) => (m.id === newMessageId ? { ...m, status: "delivered", hops: currentTTL } : m))
+          prev.map((m) => (m.id === newMessageId ? { ...m, status: "delivered", hops: relayLimit } : m))
         );
       }, 1500);
 
@@ -126,7 +125,7 @@ export default function AndroidEmulator() {
           ...prev,
           {
             id: Date.now() + 1,
-            text: "Offline packet relay matched. I am online!",
+            text: "Local relay matched. I am nearby!",
             sender: "peer",
             time: currentTimeString,
             status: "delivered",
@@ -151,7 +150,7 @@ export default function AndroidEmulator() {
           ...prev,
           {
             id: Date.now() + 1,
-            text: "🔒 Message decrypted. BLE channel clear.",
+            text: "Message decrypted. Local channel clear.",
             sender: "peer",
             time: currentTimeString,
             status: "delivered",
@@ -219,7 +218,7 @@ export default function AndroidEmulator() {
                   </div>
                 </div>
                 <h3 className="font-display font-bold text-lg text-white tracking-tight">PirateLink</h3>
-                <p className="text-[10px] font-sans text-neutral-400">Decentralized mesh messaging</p>
+                <p className="text-[10px] font-sans text-neutral-400">Local-first mesh messaging</p>
               </div>
 
               {/* Avatar Selector Board */}
@@ -318,7 +317,7 @@ export default function AndroidEmulator() {
                         </div>
                         <div className="text-left">
                           <h4 className="text-[10px] font-bold text-white leading-none">elish</h4>
-                          <span className="text-[7.5px] text-neutral-400 font-sans tracking-wide">Direct Message</span>
+                          <span className="text-[7.5px] text-neutral-400 font-sans tracking-wide">Encrypted DM</span>
                         </div>
                       </div>
                       <Lock className="h-3 w-3 text-cyan-400" />
@@ -498,7 +497,7 @@ export default function AndroidEmulator() {
                           COOPERATIVE VECTOR MATCH
                         </span>
                         <p className="text-[8px] text-neutral-400 leading-normal">
-                          Routing offline mesh tokens across {username} & elish handshakes beautifully.
+                          Relaying a local message between {username} and elish through nearby peers.
                         </p>
                       </div>
                     </div>
@@ -549,10 +548,10 @@ export default function AndroidEmulator() {
                         </span>
                         <div className="bg-[#11162d]/90 rounded-lg overflow-hidden divide-y divide-white/5 border border-white/5 text-[10px] font-sans">
                           
-                          <div className="p-2 flex items-center justify-between hover:bg-white/5 transition cursor-pointer" onClick={() => setCurrentTTL((prev) => (prev === 3 ? 5 : 3))}>
+                          <div className="p-2 flex items-center justify-between hover:bg-white/5 transition cursor-pointer" onClick={() => setRelayLimit((prev) => (prev === 3 ? 5 : 3))}>
                             <div>
-                              <p className="font-semibold text-white">Default TTL</p>
-                              <span className="text-[8px] text-neutral-400">Current limit: {currentTTL} hops</span>
+                              <p className="font-semibold text-white">Relay Limit</p>
+                              <span className="text-[8px] text-neutral-400">Current range: {relayLimit} local hops</span>
                             </div>
                             <ChevronRight className="h-3 w-3 text-neutral-500" />
                           </div>
@@ -566,20 +565,6 @@ export default function AndroidEmulator() {
                               type="button"
                               onClick={() => setShowNodeId(!showNodeId)}
                               className={`h-3.5 w-6 rounded-full transition-colors flex items-center p-0.5 cursor-pointer ${showNodeId ? "bg-cyan-500 justify-end" : "bg-neutral-700 justify-start"}`}
-                            >
-                              <span className="h-2.5 w-2.5 rounded-full bg-white shadow"></span>
-                            </button>
-                          </div>
-
-                          <div className="p-2 flex items-center justify-between hover:bg-white/5 transition-colors select-none">
-                            <div>
-                              <p className="font-semibold text-white">Enable Gateway Sync</p>
-                              <span className="text-[8px] text-neutral-400">Background synchronization</span>
-                            </div>
-                            <button 
-                              type="button"
-                              onClick={() => setGatewaySync(!gatewaySync)}
-                              className={`h-3.5 w-6 rounded-full transition-colors flex items-center p-0.5 cursor-pointer ${gatewaySync ? "bg-purple-500 justify-end" : "bg-neutral-700 justify-start"}`}
                             >
                               <span className="h-2.5 w-2.5 rounded-full bg-white shadow"></span>
                             </button>
@@ -619,7 +604,7 @@ export default function AndroidEmulator() {
                         <div className="bg-[#11162d]/85 rounded-lg border border-white/5 p-2.5 space-y-1.5 text-neutral-300 font-sans">
                           <div className="flex justify-between"><span className="text-neutral-400 font-light">Node ID</span><span className="font-mono text-cyan-400">RZ4E9I24</span></div>
                           <div className="flex justify-between"><span className="text-neutral-400 font-light">Username</span><span>{username}</span></div>
-                          <div className="flex justify-between"><span className="text-neutral-400 font-light">Default TTL</span><span>{currentTTL} hops</span></div>
+                          <div className="flex justify-between"><span className="text-neutral-400 font-light">Relay Limit</span><span>{relayLimit} local hops</span></div>
                         </div>
                       </div>
 

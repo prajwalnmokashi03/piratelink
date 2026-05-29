@@ -8,27 +8,27 @@ export default function Features() {
   const features = [
     {
       id: "offline",
-      title: "Offline Messaging",
+      title: "Nearby Offline Messaging",
       description:
-        "Send private text and voice messages directly across ranges without cellular signals, Wi-Fi, or global internet cables.",
+        "Send private local messages between nearby Android devices without depending on mobile data or internet access.",
       icon: MessageSquareOff,
       color: "from-blue-500/20 to-cyan-500/5",
       iconColor: "text-brand-cyan",
     },
     {
       id: "mesh",
-      title: "Bluetooth Mesh Relay",
+      title: "Multi-Hop Mesh Delivery",
       description:
-        "Every active peer safely and automatically relays messages to downstream contacts, multiplying the total chat range exponentially.",
+        "Messages can move through participating peers, extending reach across local groups when devices are close enough to relay.",
       icon: Layers,
       color: "from-indigo-500/20 to-blue-500/5",
       iconColor: "text-brand-blue",
     },
     {
       id: "encryption",
-      title: "Symmetric Encryption",
+      title: "Encrypted DMs",
       description:
-        "Messages are encrypted using AES-GCM symmetric encryption before transmission.",
+        "Direct messages are encrypted before they move across the local mesh.",
       icon: ShieldCheck,
       color: "from-emerald-500/20 to-teal-500/5",
       iconColor: "text-emerald-400",
@@ -37,7 +37,7 @@ export default function Features() {
       id: "no-accounts",
       title: "No Accounts Required",
       description:
-        "Skip the signup. No phone number, email registration, or central profile syncing occurs. Just download, set a local handle, and chat.",
+        "Skip the signup. No phone number, email registration, or central profile sync is required to start a local chat.",
       icon: UserX,
       color: "from-purple-500/20 to-pink-500/5",
       iconColor: "text-purple-400",
@@ -46,16 +46,16 @@ export default function Features() {
       id: "local-first",
       title: "Local-First Architecture",
       description:
-        "All data resides on your physical drive and key storage. No clouds to leak information, no centralized records to compromise.",
+        "Pirate Link is designed around nearby communication and local device state instead of cloud-first message delivery.",
       icon: HardDrive,
       color: "from-orange-500/20 to-red-500/5",
       iconColor: "text-orange-400",
     },
     {
       id: "discovery",
-      title: "Fast Peer Discovery",
+      title: "Nearby Peer Discovery",
       description:
-        "Automatically register nearby active transmitters in seconds. Dynamically update connection vectors as devices move.",
+        "Find other active Pirate Link peers in local range and keep the nearby network view current as people move.",
       icon: Zap,
       color: "from-amber-500/20 to-yellow-500/5",
       iconColor: "text-amber-400",
@@ -63,7 +63,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="py-16 md:py-24 scroll-mt-20 relative overflow-hidden">
+    <section id="features" className="py-14 md:py-20 scroll-mt-20 relative overflow-hidden">
       {/* Background visual accents */}
       <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-brand-blue/10 rounded-full filter blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-brand-cyan/5 rounded-full filter blur-[100px] pointer-events-none" />
@@ -78,7 +78,7 @@ export default function Features() {
             viewport={{ once: true }}
             className="text-xs font-semibold text-brand-cyan tracking-widest uppercase font-mono"
           >
-            Core Technology
+            Core Capabilities
           </motion.p>
           
           <motion.h2
@@ -88,7 +88,7 @@ export default function Features() {
             transition={{ delay: 0.1 }}
             className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white"
           >
-            Robust offline mechanics. No central fail points.
+            Decentralized communication for local groups.
           </motion.h2>
           
           <motion.p
@@ -98,7 +98,7 @@ export default function Features() {
             transition={{ delay: 0.2 }}
             className="font-sans text-neutral-400 text-sm sm:text-base leading-relaxed"
           >
-            Most applications break when the internet goes out. Pirate Link uses offline physical peer discovery protocols to establish connection channels anywhere.
+            Pirate Link focuses on nearby mesh messaging: local discovery, encrypted DMs, and cooperative delivery through participating Android devices.
           </motion.p>
         </div>
 
@@ -117,7 +117,7 @@ export default function Features() {
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 onMouseEnter={() => setHoveredCard(feat.id)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className="relative rounded-2xl group overflow-hidden bg-brand-card/30 border border-brand-card-border hover:border-brand-blue/30 p-8 flex flex-col justify-between h-[280px] hover:shadow-2xl hover:shadow-brand-blue/5 transition-all duration-300"
+                className="relative rounded-2xl group overflow-hidden bg-brand-card/30 border border-brand-card-border hover:border-brand-blue/30 p-6 sm:p-8 flex flex-col justify-between min-h-[230px] md:h-[280px] hover:shadow-2xl hover:shadow-brand-blue/5 transition-all duration-300"
               >
                 {/* Active hover corner glow gradient */}
                 <div

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, Radio, CheckCircle, Smartphone, ArrowRight, ShieldCheck, Cpu } from "lucide-react";
+import { Search, Radio, CheckCircle } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function HowItWorks() {
@@ -9,50 +9,50 @@ export default function HowItWorks() {
     {
       id: 1,
       title: "Discover Nearby Devices",
-      subtitle: "BLE Autonomous Proximity Scanning",
+      subtitle: "Local Bluetooth discovery",
       description:
-        "The app scans surrounding Bluetooth Low Energy (BLE) frequencies continuously. It discovers surrounding peers running the Pirate Link system without emitting trackable data or requiring GPS.",
+        "Pirate Link looks for nearby Android peers running the app and builds a local view of who can participate in the mesh.",
       icon: Search,
       terminalLines: [
-        "Initializing BLE discovery daemon...",
-        "Scanning frequencies [2.4GHz ISM]...",
-        "NEW DEVICE DETECTED: [addr: 4F:32:8A:1E:BC:D5] -> node_id: elish",
-        "Connection profile established: RSSI -64dBm (Strong)",
+        "Starting nearby discovery...",
+        "Looking for Pirate Link peers...",
+        "Peer found: elish",
+        "Local connection ready",
       ],
     },
     {
       id: 2,
       title: "Relay Messages Across Peers",
-      subtitle: "Decentralized Cooperative Mesh Routing",
+      subtitle: "Cooperative local delivery",
       description:
-        "When you dispatch a message, the app wraps the encrypted payload. Nearby peers accept, store, and automatically route it to other nodes in their range, forming custom ad-hoc connection paths.",
+        "When a recipient is not directly nearby, participating peers can help carry the encrypted message across local hops.",
       icon: Radio,
       terminalLines: [
-        "Incoming payload detected (ID: 0x98f2)...",
-        "Target client: 'elish' (Out of direct range)",
-        "Executing ad-hoc vector routing algorithm...",
-        "Relaying payload to next-hop node: Prajwal -> [Snail Relay] -> elish",
-        "Packet forwarded successfully."
+        "Encrypted message queued",
+        "Recipient not in direct range",
+        "Nearby relay available",
+        "Forwarding through local peer",
+        "Relay complete"
       ],
     },
     {
       id: 3,
       title: "Deliver Messages Without Internet",
-      subtitle: "Symmetric Decryption & ACK Delivery",
+      subtitle: "Local encrypted delivery",
       description:
-        "Once the encrypted message package reaches the recipient's phone, the shared AES-GCM key decrypts it instantly. The sender automatically receives a local receipt code when the path loops back.",
+        "Once the message reaches the recipient's device, it is decrypted locally. Delivery depends on nearby peer availability and local range.",
       icon: CheckCircle,
       terminalLines: [
-        "Target device reached: 'elish'",
-        "Attempting AES-GCM decryption...",
-        "Payload decrypted locally by recipient client.",
-        "Local ACK delivery receipt sent back. [DELIVERED]",
+        "Recipient reached: elish",
+        "Decrypting on device",
+        "Message opened locally",
+        "Delivery status updated",
       ],
     },
   ];
 
   return (
-    <section id="how-it-works" className="py-16 md:py-24 scroll-mt-20 relative bg-[#0e142e]/30 border-t border-b border-brand-card-border/50">
+    <section id="how-it-works" className="py-14 md:py-20 scroll-mt-20 relative bg-[#0e142e]/30 border-t border-b border-brand-card-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Title */}
@@ -61,15 +61,15 @@ export default function HowItWorks() {
             How It Works
           </p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Seamless ad-hoc delivery in 3 actions.
+            Nearby delivery in 3 steps.
           </h2>
           <p className="font-sans text-neutral-400 text-sm sm:text-base leading-relaxed">
-            Discover how the autonomous mesh protocols run perfectly behind the scenes to deliver offline messages without cell service or central databases.
+            Pirate Link keeps the experience simple: find nearby peers, pass encrypted messages through the local mesh, and deliver without central message servers.
           </p>
         </div>
 
         {/* 3 Step Interactive Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Actions: Vertical Steps Selector */}
           <div className="lg:col-span-5 space-y-4">
@@ -126,7 +126,7 @@ export default function HowItWorks() {
 
           {/* Right Action: Interactive Simulated Output Screen */}
           <div className="lg:col-span-7 h-full">
-            <div className="sticky top-28 bg-[#090D1A] rounded-2xl border border-brand-card-border p-6 shadow-2xl overflow-hidden relative min-h-[420px] flex flex-col justify-between">
+            <div className="lg:sticky lg:top-28 bg-[#090D1A] rounded-2xl border border-brand-card-border p-5 sm:p-6 shadow-2xl overflow-hidden relative min-h-[360px] md:min-h-[420px] flex flex-col justify-between">
               
               {/* Fake Chrome / Window frame and visual tabs */}
               <div>
@@ -142,7 +142,7 @@ export default function HowItWorks() {
                     </span>
                   </div>
                   <span className="text-[10px] font-mono text-brand-cyan uppercase tracking-wider bg-brand-cyan/10 px-2.5 py-0.5 rounded-full">
-                    Mesh Syncing
+                    Local Mesh
                   </span>
                 </div>
 
@@ -160,7 +160,7 @@ export default function HowItWorks() {
               {/* Terminal Logs Block */}
               <div className="mt-4 bg-black/40 rounded-xl border border-white/5 p-4 sm:p-5 font-mono text-xs text-neutral-300 space-y-2 select-all relative overflow-hidden">
                 <div className="absolute top-2 right-2 text-[9px] font-semibold text-neutral-500 tracking-wider">
-                  REAL-TIME LOGS
+                  SIMULATED STATUS
                 </div>
                 
                 <AnimatePresence mode="wait">
@@ -180,7 +180,7 @@ export default function HowItWorks() {
                     ))}
                     <p className="text-brand-blue animate-pulse-slow">
                       <span className="text-brand-cyan mr-1.5">&gt;</span>
-                      System listening for mesh events...
+                      Listening for nearby mesh events...
                     </p>
                   </motion.div>
                 </AnimatePresence>

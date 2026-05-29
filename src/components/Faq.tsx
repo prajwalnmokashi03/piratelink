@@ -13,23 +13,31 @@ export default function Faq() {
   const faqs: FaqItem[] = [
     {
       question: "How does the message travel if my target peer is far away?",
-      answer: "Pirate Link uses 'cooperative multi-hop packet routing'. When you send a message to a distant peer, the packet cascades automatically through intermediate Pirate Link nodes nearby. Each node acts as a passive courier, storing the encrypted packet briefly and forwarding it onward until the designated recipient is within active local range.",
+      answer: "Pirate Link can use nearby participating devices as local relays. Delivery depends on peer density, Bluetooth conditions, device movement, and whether a route exists through nearby Android devices.",
     },
     {
       question: "Will keeping Bluetooth scanning active drain my Android battery?",
-      answer: "The app is engineered with Bluetooth Low Energy (BLE) passive advertisements and precise duty-cycling. It only activates high-frequency discovery cycles sporadically when sending message spikes. In passive listening/beacon mode, Pirate Link consumes less than 1.5% of battery power hourly.",
+      answer: "Pirate Link is designed around Bluetooth Low Energy and practical discovery cycles. Actual battery usage varies by Android device, permissions, OS behavior, and how often the app is actively discovering or relaying messages.",
     },
     {
       question: "Can someone relaying my message intercept or read the conversation?",
-      answer: "No. Every communication packet is fully encrypted at the source using highly robust AES-GCM symmetric block ciphers. Intermediate relays only parse routing metadata envelopes; they have zero visibility into content payloads.",
+      answer: "Message content is encrypted before relay. Intermediate peers are used to help move messages locally, not to read the conversation.",
     },
     {
       question: "What is the physical range between individual peer devices?",
-      answer: "Standard modern Bluetooth antennas cover between 60 to 100 meters under typical unobstructed conditions. Because the mesh is daisy-chained, adding more active nodes cascaded 80 meters apart spreads message relay limits over entire kilometers dynamically without cell towers.",
+      answer: "Bluetooth range depends heavily on hardware, walls, interference, and line of sight. Multi-hop relay can extend local reach when enough nearby peers are available, but Pirate Link does not promise unlimited or global offline distance.",
     },
     {
       question: "Do I need root access, cell plans, or SIM cards on my phone?",
-      answer: "Absolutely not. Pirate Link functions on decommissioned burner phones, tablets, and any standard Android hardware (Oreo onwards) without cellular accounts, active subscriptions, or SIM cards. Only local Bluetooth hardware operations are needed.",
+      answer: "No root access, cell plan, or SIM card is required for local Android mesh messaging. You still need compatible Android hardware, Bluetooth permissions, and nearby peers running Pirate Link.",
+    },
+    {
+      question: "Does the desktop app join the Android Bluetooth mesh today?",
+      answer: "Not yet. The desktop runtime and UI exist, but desktop communication currently works over TCP/UDP on the same LAN or Wi-Fi network. Android-to-desktop mesh interoperability is still in progress.",
+    },
+    {
+      question: "Does Pirate Link include an internet gateway or cloud relay?",
+      answer: "No. Internet gateways, cloud relay, WAN routing, internet fallback, and cross-network synchronization are planned future capabilities, not current product features.",
     },
   ];
 
@@ -38,7 +46,7 @@ export default function Faq() {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-24 scroll-mt-20 relative overflow-hidden bg-[#0e142e]/20 border-t border-brand-card-border/50">
+    <section id="faq" className="py-14 md:py-20 scroll-mt-20 relative overflow-hidden bg-[#0e142e]/20 border-t border-brand-card-border/50">
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-cyan/5 rounded-full filter blur-[120px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -52,7 +60,7 @@ export default function Faq() {
             Common Inquiries
           </h2>
           <p className="font-sans text-neutral-400 text-sm leading-relaxed max-w-xl mx-auto">
-            Everything you need to know about physical, local P2P networking capabilities and device integrations.
+            Practical answers about local P2P messaging, platform status, and current capability boundaries.
           </p>
         </div>
 
